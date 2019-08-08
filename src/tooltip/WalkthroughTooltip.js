@@ -140,7 +140,14 @@ class Tooltip extends React.PureComponent {
               flex: 1,
             }}
           >
-            <View pointerEvents="box-only">{this.props.children}</View>
+            <View
+              pointerEvents="box-only"
+              style={{
+                flex: 1,
+              }}
+            >
+              {this.props.children}
+            </View>
           </TouchableOpacity>
         </View>
         {withPointer && this.renderPointer(tooltipStyle.top)}
