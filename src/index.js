@@ -29,6 +29,8 @@ import Avatar from './avatar/Avatar';
 import Header from './header/Header';
 import PricingCard from './pricing/PricingCard';
 import Tooltip from './tooltip/Tooltip';
+import WalkthroughTooltip from './tooltip/WalkthroughTooltip';
+
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -71,6 +73,7 @@ export {
   Overlay,
   ThemeProvider,
   ThemeConsumer,
+  WalkthroughTooltip,
   withBadge,
   withTheme,
   Image,
