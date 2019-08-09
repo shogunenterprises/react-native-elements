@@ -112,6 +112,7 @@ class WalkthroughTooltip extends React.PureComponent {
       toggleOnPress,
       highlightColor,
       onPress,
+      renderedContainerStyles,
     } = this.props;
 
     if (!withTooltip) {
@@ -138,6 +139,7 @@ class WalkthroughTooltip extends React.PureComponent {
             activeOpacity={1}
             style={{
               flex: 1,
+              ...renderedContainerStyles,
             }}
           >
             <View
@@ -224,6 +226,7 @@ WalkthroughTooltip.propTypes = {
   height: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   containerStyle: ViewPropTypes.style,
+  renderedContainerStyles: ViewPropTypes.style,
   pointerColor: PropTypes.string,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
@@ -243,6 +246,7 @@ WalkthroughTooltip.defaultProps = {
   height: 40,
   width: 150,
   containerStyle: {},
+  renderedContainerStyles: {},
   backgroundColor: '#617080',
   onClose: () => {},
   onOpen: () => {},
