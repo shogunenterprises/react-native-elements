@@ -10,7 +10,7 @@ import getTooltipCoordinate, {
   getElementVisibleWidth,
 } from './getTooltipCoordinate';
 
-class Tooltip extends React.PureComponent {
+class WalkthroughTooltip extends React.PureComponent {
   state = {
     isVisible: false,
     yOffset: 0,
@@ -216,7 +216,7 @@ class Tooltip extends React.PureComponent {
   }
 }
 
-Tooltip.propTypes = {
+WalkthroughTooltip.propTypes = {
   children: PropTypes.element,
   withPointer: PropTypes.bool,
   popover: PropTypes.element,
@@ -234,7 +234,7 @@ Tooltip.propTypes = {
   highlightColor: PropTypes.string,
 };
 
-Tooltip.defaultProps = {
+WalkthroughTooltip.defaultProps = {
   withOverlay: true,
   overlayColor: 'rgba(250, 250, 250, 0.70)',
   highlightColor: 'transparent',
@@ -256,5 +256,5 @@ const styles = {
   }),
 };
 
-export { Tooltip };
-export default withTheme(Tooltip, 'Tooltip');
+export { WalkthroughTooltip };
+export default withTheme(WalkthroughTooltip, 'Tooltip');
