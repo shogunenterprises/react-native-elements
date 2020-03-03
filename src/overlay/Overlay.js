@@ -25,7 +25,6 @@ const Overlay = props => {
     width,
     height,
     fullScreen,
-    containerStyle,
     ...rest
   } = props;
 
