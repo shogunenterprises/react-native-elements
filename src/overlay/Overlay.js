@@ -17,6 +17,7 @@ const Overlay = props => {
     isVisible,
     containerStyle,
     overlayStyle,
+    overlayContainerStyle,
     windowBackgroundColor,
     overlayBackgroundColor,
     onBackdropPress,
@@ -24,6 +25,7 @@ const Overlay = props => {
     width,
     height,
     fullScreen,
+    containerStyle,
     ...rest
   } = props;
 
@@ -43,12 +45,12 @@ const Overlay = props => {
           style={StyleSheet.flatten([
             styles.backdrop,
             { backgroundColor: windowBackgroundColor },
-            containerStyle,
+            overlayContainerStyle,
           ])}
         />
       </TouchableWithoutFeedback>
 
-      <View style={styles.container} pointerEvents="box-none">
+      <View style={StyleSheet.flatten([styles.container, containerStyle])} pointerEvents="box-none">
         <View
           style={StyleSheet.flatten([
             styles.overlay,
@@ -74,6 +76,7 @@ Overlay.propTypes = {
   isVisible: PropTypes.bool.isRequired,
   containerStyle: ViewPropTypes.style,
   overlayStyle: ViewPropTypes.style,
+  overlayContainerStyle: ViewPropTypes.style,
   windowBackgroundColor: PropTypes.string,
   overlayBackgroundColor: PropTypes.string,
   onBackdropPress: PropTypes.func,
