@@ -1440,6 +1440,13 @@ export class Tooltip extends React.Component<TooltipProps, any> {
   toggleTooltip(): void;
 }
 
+export class WalkthroughTooltip extends React.Component<TooltipProps, any> {
+  /**
+   * Toggles tooltip manually.
+   */
+  toggleTooltip(): void;
+}
+
 export interface SearchBarDefault extends SearchBarBase {
   /**
    * Change theme to light theme
