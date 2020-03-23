@@ -1405,7 +1405,7 @@ export interface TooltipProps {
    * Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
    * @default 40
    */
-  height?: number;
+  height?: number | 'auto';
 
   /**
    * Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
