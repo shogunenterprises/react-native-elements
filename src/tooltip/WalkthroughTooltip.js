@@ -132,6 +132,7 @@ class WalkthroughTooltip extends React.PureComponent {
             overflow: 'visible',
             width: elementWidth,
             height: elementHeight,
+            borderRadius: elementHeight * 0.5,
           }}
         >
           <TouchableOpacity
