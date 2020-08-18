@@ -1431,6 +1431,11 @@ export interface TooltipProps {
    * Flag to determine whether or not dislay pointer.
    */
   withPointer?: boolean;
+  
+  /**
+   * Flag to determine how rounded the border radius should be.
+   */
+  rounded?: boolean;
 }
 
 export class Tooltip extends React.Component<TooltipProps, any> {
