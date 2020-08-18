@@ -113,6 +113,7 @@ class WalkthroughTooltip extends React.PureComponent {
       highlightColor,
       onPress,
       renderedContainerStyles,
+      rounded,
     } = this.props;
 
     if (!withTooltip) {
