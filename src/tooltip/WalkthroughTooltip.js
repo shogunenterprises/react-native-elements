@@ -132,7 +132,7 @@ class WalkthroughTooltip extends React.PureComponent {
             overflow: 'visible',
             width: elementWidth,
             height: elementHeight,
-            borderRadius: elementHeight * 0.5,
+            ...{ borderRadius: rounded ? elementHeight * 0.5 : 10 }
           }}
         >
           <TouchableOpacity
@@ -236,6 +236,7 @@ WalkthroughTooltip.propTypes = {
   withOverlay: PropTypes.bool,
   backgroundColor: PropTypes.string,
   highlightColor: PropTypes.string,
+  rounded: PropTypes.bool,
 };
 
 WalkthroughTooltip.defaultProps = {
@@ -244,6 +245,7 @@ WalkthroughTooltip.defaultProps = {
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
+  rounded: true,
   height: 40,
   width: 150,
   containerStyle: {},
