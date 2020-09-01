@@ -1132,7 +1132,15 @@ export interface ListItemProps extends TouchableHighlightProps {
 /**
  * ListItem component
  */
-export class ListItem extends React.Component<ListItemProps, any> {}
+
+// patching these components of ListItem that should exist:
+// https://github.com/react-native-elements/react-native-elements/issues/2523
+export class ListItem extends React.Component<ListItemProps, any> {
+  static Content: React.ComponentType<{right?: boolean}>;
+  static Title: React.ComponentType<TextProps & {right?: boolean, rightStyle?: StyleProp<ViewStyle>}>;
+  static Subtitle: React.ComponentType<TextProps & {right?: boolean, rightStyle?: StyleProp<ViewStyle>}>;
+}
+
 
 export interface OverlayProps extends ModalProps {
   /**
